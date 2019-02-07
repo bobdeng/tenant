@@ -1,9 +1,7 @@
 package cn.bobdeng.tenant.domain;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
+
 public class TenantRepositoryImpl implements TenantRepository {
     private Map<Integer,RentContact> contactMap=new HashMap<>();
     private int index=1;
@@ -37,5 +35,10 @@ public class TenantRepositoryImpl implements TenantRepository {
         }
         contactMap.put(rentContact.getId(),rentContact);
         return rentContact;
+    }
+
+    @Override
+    public List<Tenant> findApartmentTenants(int apartmentId) {
+        return null;
     }
 }
