@@ -83,7 +83,7 @@ public class TenantServiceImplTest {
                     .mobile(MOBILE)
                     .build());
             assertTrue(false);
-        }catch (DuplicateContactException e){
+        }catch (DuplicateTenantException e){
 
         }
     }
