@@ -38,7 +38,7 @@ public class TenantRepositoryImpl implements TenantRepository {
     }
 
     @Override
-    public List<Tenant> findApartmentTenants(int apartmentId) {
+    public List<Tenant> findTenants(int contactId) {
         return null;
     }
 }

@@ -24,15 +24,16 @@ public class TenantDO {
     private String name;
     @Column(length = 15)
     private String mobile;
-    private int apartmentId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "rent_contact_id", foreignKey = @javax.persistence.ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
+    private RentContactDO rentContact;
 
     public Tenant toEntity() {
         return Tenant.builder()
                 .id(getId())
-                .comCode(getComCode())
-                .apartmentId(getApartmentId())
                 .mobile(getMobile())
                 .name(getName())
+                .rentContact(rentContact.toEntity())
                 .build();
     }
 
@@ -40,9 +41,8 @@ public class TenantDO {
         return TenantDO.builder()
                 .id(entity.getId())
                 .name(entity.getName())
-                .apartmentId(entity.getApartmentId())
                 .mobile(entity.getMobile())
-                .comCode(entity.getComCode())
+                .rentContact(RentContactDO.fromEntity(entity.getRentContact()))
                 .build();
     }
 }

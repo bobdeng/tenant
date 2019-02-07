@@ -11,8 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Tenant {
     private long id;
-    private String comCode;
     private String name;
     private String mobile;
-    private int apartmentId;
+    private RentContact rentContact;
 }

@@ -33,8 +33,8 @@ public class TenantRepositoryImpl implements TenantRepository {
     }
 
     @Override
-    public List<Tenant> findApartmentTenants(int apartmentId) {
-        return tenantDAO.findByApartmentId(apartmentId).map(TenantDO::toEntity).collect(Collectors.toList());
+    public List<Tenant> findTenants(int contactId) {
+        return tenantDAO.findByRentContactId(contactId).map(TenantDO::toEntity).collect(Collectors.toList());
     }
 
     @Override

@@ -8,7 +8,7 @@ public interface TenantRepository {
 
     Optional<Tenant> findById(long id);
 
-    List<Tenant> findApartmentTenants(int apartmentId);
+    List<Tenant> findTenants(int contactId);
 
     void deleteTenant(Tenant tenant);
 

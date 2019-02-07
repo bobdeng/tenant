@@ -7,5 +7,6 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public interface TenantDAO extends CrudRepository<TenantDO,Long> {
-    Stream<TenantDO> findByApartmentId(int apartmentId);
+
+    Stream<TenantDO> findByRentContactId(int contactId);
 }
