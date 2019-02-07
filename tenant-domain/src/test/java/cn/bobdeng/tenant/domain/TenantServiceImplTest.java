@@ -10,6 +10,7 @@ import static org.junit.Assert.assertTrue;
 @RunWith(JUnit4.class)
 public class TenantServiceImplTest {
     public static final int APARTMENT_ID = 10001;
+    public static final String MOBILE = "18657124116";
     TenantServiceImpl tenantService;
     TenantRepositoryImpl tenantRepository;
 
@@ -62,5 +63,28 @@ public class TenantServiceImplTest {
                 .end(System.currentTimeMillis())
                 .build());
         tenantService.renewContact(rentContact,System.currentTimeMillis()+100000);
+    }
+    @Test
+    public void addTenant(){
+        RentContact rentContact = tenantService.newContact(RentContact.builder()
+                .apartmentId(APARTMENT_ID)
+                .start(System.currentTimeMillis()-100000)
+                .end(System.currentTimeMillis())
+                .build());
+        tenantService.newTenant(Tenant.builder()
+                .rentContact(rentContact)
+                .name("name")
+                .mobile(MOBILE)
+                .build());
+        try{
+            tenantService.newTenant(Tenant.builder()
+                    .rentContact(rentContact)
+                    .name("name")
+                    .mobile(MOBILE)
+                    .build());
+            assertTrue(false);
+        }catch (DuplicateContactException e){
+
+        }
     }
 }

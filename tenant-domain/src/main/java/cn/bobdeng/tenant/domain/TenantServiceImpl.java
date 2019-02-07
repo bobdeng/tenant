@@ -9,6 +9,9 @@ public class TenantServiceImpl implements TenantService {
 
     @Override
     public Tenant newTenant(Tenant tenant) {
+        if (tenantRepository.findByContactAndMobile(tenant.getRentContact().getId(),tenant.getMobile()).isPresent()) {
+            throw new DuplicateContactException();
+        }
         tenant.setId(0);
         return tenantRepository.newTenant(tenant);
     }

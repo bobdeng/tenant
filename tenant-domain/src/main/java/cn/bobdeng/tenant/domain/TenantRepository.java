@@ -8,6 +8,8 @@ public interface TenantRepository {
 
     Optional<Tenant> findById(long id);
 
+    Optional<Tenant> findByContactAndMobile(int contactId,String mobile);
+
     List<Tenant> findTenants(int contactId);
 
     Optional<RentContact> findContactById(int contactId);

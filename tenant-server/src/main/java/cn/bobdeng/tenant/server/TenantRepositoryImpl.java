@@ -51,4 +51,9 @@ public class TenantRepositoryImpl implements TenantRepository {
     public Optional<RentContact> findContactById(int contactId) {
         return rentContactDAO.findById(contactId).map(RentContactDO::toEntity);
     }
+
+    @Override
+    public Optional<Tenant> findByContactAndMobile(int contactId, String mobile) {
+        return tenantDAO.findByRentContactIdAndMobile(contactId,mobile).map(TenantDO::toEntity);
+    }
 }
