@@ -34,7 +34,7 @@ public class TenantServiceImpl implements TenantService {
     @Override
     public void stopContact(RentContact rentContact) {
         rentContact.setActive(false);
-        tenantRepository.findApartmentTenants(rentContact.getApartmentId())
+        tenantRepository.findTenants(rentContact.getId())
                 .forEach(tenantRepository::deleteTenant);
         tenantRepository.saveContact(rentContact);
     }

@@ -1,5 +1,3 @@
-cn/bobdeng/tenant/domain/TenantService.class
 cn/bobdeng/tenant/domain/Tenant.class
-cn/bobdeng/tenant/domain/TenantServiceImpl.class
 cn/bobdeng/tenant/domain/Tenant$TenantBuilder.class
 cn/bobdeng/tenant/domain/TenantRepository.class
