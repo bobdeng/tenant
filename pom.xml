@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>tenant-domain</module>
+        <module>tenant-server</module>
     </modules>
 
     <distributionManagement>
