@@ -46,4 +46,9 @@ public class TenantRepositoryImpl implements TenantRepository {
     public RentContact saveContact(RentContact rentContact) {
         return rentContactDAO.save(RentContactDO.fromEntity(rentContact)).toEntity();
     }
+
+    @Override
+    public Optional<RentContact> findContactById(int contactId) {
+        return rentContactDAO.findById(contactId).map(RentContactDO::toEntity);
+    }
 }

@@ -1,4 +1,6 @@
 /Users/zhiguodeng/git/smartlock/server2/tenant/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDO.java
 /Users/zhiguodeng/git/smartlock/server2/tenant/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDAO.java
 /Users/zhiguodeng/git/smartlock/server2/tenant/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantRepositoryImpl.java
+/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-server/src/main/java/cn/bobdeng/tenant/server/RentContactDO.java
+/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-server/src/main/java/cn/bobdeng/tenant/server/RentContactDAO.java
 /Users/zhiguodeng/git/smartlock/server2/tenant/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantConfig.java

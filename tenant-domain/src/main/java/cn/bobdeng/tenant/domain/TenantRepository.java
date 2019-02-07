@@ -10,6 +10,8 @@ public interface TenantRepository {
 
     List<Tenant> findTenants(int contactId);
 
+    Optional<RentContact> findContactById(int contactId);
+
     void deleteTenant(Tenant tenant);
 
     Optional<RentContact> findLastContact(int apartmentId);

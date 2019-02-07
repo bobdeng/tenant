@@ -41,4 +41,9 @@ public class TenantRepositoryImpl implements TenantRepository {
     public List<Tenant> findTenants(int contactId) {
         return null;
     }
+
+    @Override
+    public Optional<RentContact> findContactById(int contactId) {
+        return Optional.empty();
+    }
 }
