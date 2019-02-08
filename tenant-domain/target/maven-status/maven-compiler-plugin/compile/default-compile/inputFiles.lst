@@ -1,4 +1,5 @@
 /Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/RentContact.java
+/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateTenantException.java
 /Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java
 /Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantService.java
 /Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateContactException.java

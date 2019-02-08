@@ -27,12 +27,15 @@ public class TenantDO {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rent_contact_id", foreignKey = @javax.persistence.ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
     private RentContactDO rentContact;
+    @Column(length = 100)
+    private String faceImage;
 
     public Tenant toEntity() {
         return Tenant.builder()
                 .id(getId())
                 .mobile(getMobile())
                 .name(getName())
+                .faceImage(getFaceImage())
                 .rentContact(rentContact.toEntity())
                 .build();
     }
@@ -41,6 +44,7 @@ public class TenantDO {
         return TenantDO.builder()
                 .id(entity.getId())
                 .name(entity.getName())
+                .faceImage(entity.getFaceImage())
                 .mobile(entity.getMobile())
                 .rentContact(RentContactDO.fromEntity(entity.getRentContact()))
                 .build();

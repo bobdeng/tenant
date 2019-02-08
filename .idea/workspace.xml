@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc064a9f-fadf-4db1-aefc-108ed1aac77e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateTenantException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/target/classes/cn/bobdeng/tenant/domain/TenantRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/target/classes/cn/bobdeng/tenant/domain/TenantRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/target/surefire-reports/cn.bobdeng.tenant.domain.TenantServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/target/surefire-reports/cn.bobdeng.tenant.domain.TenantServiceImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/target/tenant-domain-1.0.0-SNAPSHOT-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/target/tenant-domain-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/target/tenant-domain-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/target/tenant-domain-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/target/test-classes/cn/bobdeng/tenant/domain/TenantRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/target/test-classes/cn/bobdeng/tenant/domain/TenantRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-server/target/classes/cn/bobdeng/tenant/server/TenantRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-server/target/classes/cn/bobdeng/tenant/server/TenantRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-server/target/tenant-server-1.0.0-SNAPSHOT-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-server/target/tenant-server-1.0.0-SNAPSHOT-sources.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-server/target/tenant-server-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-server/target/tenant-server-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tenant-domain/target/test-classes/cn/bobdeng/tenant/domain/TenantServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/target/test-classes/cn/bobdeng/tenant/domain/TenantServiceImplTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TenantServiceImplTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TenantServiceImplTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="81" column="33" lean-forward="true" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+            <state relative-caret-position="182">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
             </state>
           </provider>
         </entry>
@@ -57,8 +50,8 @@
       <file leaf-file-name="TenantRepositoryImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
+            <state relative-caret-position="287">
+              <caret line="56" column="94" selection-start-line="56" selection-start-column="94" selection-end-line="56" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,11 +59,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DuplicateTenantException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateTenantException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="37" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TenantRepositoryImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state relative-caret-position="351">
+              <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
               <folding>
                 <element signature="e#606#607#0" expanded="true" />
                 <element signature="e#639#640#0" expanded="true" />
@@ -86,29 +88,17 @@
       <file leaf-file-name="TenantDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="120">
+              <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TenantDO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TenantServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TenantServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+            <state relative-caret-position="156">
+              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
               <folding>
                 <element signature="e#197#198#0" expanded="true" />
                 <element signature="e#253#254#0" expanded="true" />
@@ -174,13 +164,14 @@
         <option value="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/RentContactDAO.java" />
         <option value="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/Tenant.java" />
         <option value="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDO.java" />
-        <option value="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDAO.java" />
-        <option value="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java" />
         <option value="$PROJECT_DIR$/tenant-server/pom.xml" />
-        <option value="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java" />
-        <option value="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java" />
         <option value="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDAO.java" />
+        <option value="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateTenantException.java" />
+        <option value="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -364,6 +355,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="cn.bobdeng.tenant.domain" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.bobdeng.tenant.domain" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -563,14 +557,11 @@
       <option name="presentableId" value="Default" />
       <updated>1549511393724</updated>
       <workItem from="1549511395243" duration="5793000" />
-      <workItem from="1549549398791" duration="254000" />
+      <workItem from="1549549398791" duration="477000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TenantServiceImplTest_newContact - 2019.02.07 at 12h 37m 26s.xml">
-      <configuration name="TenantServiceImplTest.newContact" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TenantServiceImplTest_newContact - 2019.02.07 at 12h 38m 11s.xml">
       <configuration name="TenantServiceImplTest.newContact" configurationId="JUnit" />
     </history-entry>
@@ -586,13 +577,27 @@
     <history-entry file="TenantServiceImplTest_newContact_repeat - 2019.02.07 at 12h 40m 36s.xml">
       <configuration name="TenantServiceImplTest.newContact_repeat" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TenantServiceImplTest_addTenant - 2019.02.07 at 22h 27m 37s.xml">
+      <configuration name="TenantServiceImplTest.addTenant" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TenantServiceImplTest_addTenant - 2019.02.07 at 22h 28m 54s.xml">
+      <configuration name="TenantServiceImplTest.addTenant" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TenantServiceImplTest - 2019.02.07 at 22h 29m 01s.xml">
+      <configuration name="TenantServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TenantServiceImplTest - 2019.02.07 at 22h 30m 35s.xml">
+      <configuration name="TenantServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TenantServiceImplTest - 2019.02.07 at 22h 30m 46s.xml">
+      <configuration name="TenantServiceImplTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6047000" />
+    <option name="totallyTimeSpent" value="6270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1416" height="817" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
@@ -608,20 +613,21 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Line Counter" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32998565" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32998565" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496361" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32998565" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496361" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -732,6 +738,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -787,24 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
-          <folding>
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tenant-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -819,26 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="73" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/Tenant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -846,10 +817,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+        <state relative-caret-position="351">
+          <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
           <folding>
             <element signature="e#606#607#0" expanded="true" />
             <element signature="e#639#640#0" expanded="true" />
@@ -861,10 +842,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="56" column="94" selection-start-line="56" selection-start-column="94" selection-end-line="56" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateTenantException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="81" column="33" lean-forward="true" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
+        <state relative-caret-position="182">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding>
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

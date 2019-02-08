@@ -13,5 +13,6 @@ public class Tenant {
     private long id;
     private String name;
     private String mobile;
+    private String faceImage;
     private RentContact rentContact;
 }
