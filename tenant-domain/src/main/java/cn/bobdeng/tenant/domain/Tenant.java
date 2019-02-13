@@ -14,5 +14,6 @@ public class Tenant {
     private String name;
     private String mobile;
     private String faceImage;
+    private String comCode;
     private RentContact rentContact;
 }

@@ -33,6 +33,7 @@ public class TenantDO {
     public Tenant toEntity() {
         return Tenant.builder()
                 .id(getId())
+                .comCode(getComCode())
                 .mobile(getMobile())
                 .name(getName())
                 .faceImage(getFaceImage())
@@ -46,6 +47,7 @@ public class TenantDO {
                 .name(entity.getName())
                 .faceImage(entity.getFaceImage())
                 .mobile(entity.getMobile())
+                .comCode(entity.getComCode())
                 .rentContact(RentContactDO.fromEntity(entity.getRentContact()))
                 .build();
     }
