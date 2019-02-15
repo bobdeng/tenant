@@ -1,6 +1,6 @@
 package cn.bobdeng.tenant.server;
 
-import cn.bobdeng.tenant.domain.RentContact;
+import cn.bobdeng.tenant.domain.RentContract;
 import cn.bobdeng.tenant.domain.Tenant;
 import cn.bobdeng.tenant.domain.TenantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,27 +33,27 @@ public class TenantRepositoryImpl implements TenantRepository {
     }
 
     @Override
-    public List<Tenant> findTenants(int contactId) {
-        return tenantDAO.findByRentContactId(contactId).map(TenantDO::toEntity).collect(Collectors.toList());
+    public List<Tenant> findTenants(int contractId) {
+        return tenantDAO.findByRentContractId(contractId).map(TenantDO::toEntity).collect(Collectors.toList());
     }
 
     @Override
-    public Optional<RentContact> findLastContact(int apartmentId) {
-        return rentContactDAO.findTop1ByApartmentIdOrderByStartDesc(apartmentId).map(RentContactDO::toEntity);
+    public Optional<RentContract> findLastContract(int apartmentId) {
+        return rentContactDAO.findTop1ByApartmentIdOrderByStartDesc(apartmentId).map(RentContractDO::toEntity);
     }
 
     @Override
-    public RentContact saveContact(RentContact rentContact) {
-        return rentContactDAO.save(RentContactDO.fromEntity(rentContact)).toEntity();
+    public RentContract saveContact(RentContract rentContact) {
+        return rentContactDAO.save(RentContractDO.fromEntity(rentContact)).toEntity();
     }
 
     @Override
-    public Optional<RentContact> findContactById(int contactId) {
-        return rentContactDAO.findById(contactId).map(RentContactDO::toEntity);
+    public Optional<RentContract> findContractById(int contactId) {
+        return rentContactDAO.findById(contactId).map(RentContractDO::toEntity);
     }
 
     @Override
-    public Optional<Tenant> findByContactAndMobile(int contactId, String mobile) {
-        return tenantDAO.findByRentContactIdAndMobile(contactId,mobile).map(TenantDO::toEntity);
+    public Optional<Tenant> findByContractAndMobile(int contactId, String mobile) {
+        return tenantDAO.findByRentContractIdAndMobile(contactId,mobile).map(TenantDO::toEntity);
     }
 }

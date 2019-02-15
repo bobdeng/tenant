@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface RentContactDAO extends CrudRepository<RentContactDO,Integer> {
-    Optional<RentContactDO> findTop1ByApartmentIdOrderByStartDesc(int apartmentId);
+public interface RentContactDAO extends CrudRepository<RentContractDO,Integer> {
+    Optional<RentContractDO> findTop1ByApartmentIdOrderByStartDesc(int apartmentId);
 }

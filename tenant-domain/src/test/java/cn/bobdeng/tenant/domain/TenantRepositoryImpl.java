@@ -3,7 +3,7 @@ package cn.bobdeng.tenant.domain;
 import java.util.*;
 
 public class TenantRepositoryImpl implements TenantRepository {
-    private Map<Integer,RentContact> contactMap=new HashMap<>();
+    private Map<Integer, RentContract> contactMap=new HashMap<>();
     private Map<Long,Tenant> tenantMap=new HashMap<>();
     private int index=1;
     @Override
@@ -24,15 +24,15 @@ public class TenantRepositoryImpl implements TenantRepository {
     }
 
     @Override
-    public Optional<RentContact> findLastContact(int apartmentId) {
+    public Optional<RentContract> findLastContract(int apartmentId) {
         return contactMap.values().stream()
                 .filter(rentContact -> rentContact.getApartmentId()==apartmentId)
-                .sorted(Comparator.comparingLong(RentContact::getStart).reversed())
+                .sorted(Comparator.comparingLong(RentContract::getStart).reversed())
                 .findFirst();
     }
 
     @Override
-    public RentContact saveContact(RentContact rentContact) {
+    public RentContract saveContact(RentContract rentContact) {
         if(rentContact.getId()==0){
             rentContact.setId(index++);
         }
@@ -46,12 +46,12 @@ public class TenantRepositoryImpl implements TenantRepository {
     }
 
     @Override
-    public Optional<RentContact> findContactById(int contactId) {
+    public Optional<RentContract> findContractById(int contactId) {
         return Optional.empty();
     }
 
     @Override
-    public Optional<Tenant> findByContactAndMobile(int contactId, String mobile) {
+    public Optional<Tenant> findByContractAndMobile(int contactId, String mobile) {
         return tenantMap.values().stream()
                 .filter(tenant -> tenant.getRentContact().getId()==contactId)
                 .filter(tenant -> tenant.getMobile().equals(mobile))

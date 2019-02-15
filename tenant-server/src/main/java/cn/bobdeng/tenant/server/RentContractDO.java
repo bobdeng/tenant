@@ -1,6 +1,6 @@
 package cn.bobdeng.tenant.server;
 
-import cn.bobdeng.tenant.domain.RentContact;
+import cn.bobdeng.tenant.domain.RentContract;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,8 +13,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "t_apartment_rent_contact")
-public class RentContactDO {
+@Table(name = "t_apartment_rent_contract")
+public class RentContractDO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,18 +23,18 @@ public class RentContactDO {
     @Column(length = 20)
     private String representMobile;
     @Column(length = 50)
-    private String contactId;
+    private String contractId;
     private int apartmentId;
     private boolean active;
     private long start;
     private long end;
 
-    public RentContact toEntity() {
-        return RentContact.builder()
+    public RentContract toEntity() {
+        return RentContract.builder()
                 .id(getId())
                 .representName(getRepresentName())
                 .representMobile(getRepresentMobile())
-                .contactId(getContactId())
+                .contractId(getContractId())
                 .apartmentId(getApartmentId())
                 .active(isActive())
                 .start(getStart())
@@ -42,12 +42,12 @@ public class RentContactDO {
                 .build();
     }
 
-    public static RentContactDO fromEntity(RentContact entity) {
-        return RentContactDO.builder()
+    public static RentContractDO fromEntity(RentContract entity) {
+        return RentContractDO.builder()
                 .id(entity.getId())
                 .representName(entity.getRepresentName())
                 .representMobile(entity.getRepresentMobile())
-                .contactId(entity.getContactId())
+                .contractId(entity.getContractId())
                 .apartmentId(entity.getApartmentId())
                 .active(entity.isActive())
                 .start(entity.getStart())

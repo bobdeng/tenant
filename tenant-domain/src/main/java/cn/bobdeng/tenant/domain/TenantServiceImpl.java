@@ -9,7 +9,7 @@ public class TenantServiceImpl implements TenantService {
 
     @Override
     public Tenant newTenant(Tenant tenant) {
-        if (tenantRepository.findByContactAndMobile(tenant.getRentContact().getId(),tenant.getMobile()).isPresent()) {
+        if (tenantRepository.findByContractAndMobile(tenant.getRentContact().getId(),tenant.getMobile()).isPresent()) {
             throw new DuplicateTenantException();
         }
         tenant.setId(0);
@@ -23,29 +23,29 @@ public class TenantServiceImpl implements TenantService {
     }
 
     @Override
-    public RentContact newContact(RentContact rentContact) {
-        if (tenantRepository.findLastContact(rentContact.getApartmentId())
-                .filter(RentContact::isActive)
+    public RentContract newContact(RentContract rentContract) {
+        if (tenantRepository.findLastContract(rentContract.getApartmentId())
+                .filter(RentContract::isActive)
                 .isPresent()) {
             throw new DuplicateContactException();
         }
-        rentContact.setActive(true);
-        rentContact.setId(0);
-        return tenantRepository.saveContact(rentContact);
+        rentContract.setActive(true);
+        rentContract.setId(0);
+        return tenantRepository.saveContact(rentContract);
     }
 
     @Override
-    public void stopContact(RentContact rentContact) {
-        rentContact.setActive(false);
-        tenantRepository.findTenants(rentContact.getId())
+    public void stopContact(RentContract rentContract) {
+        rentContract.setActive(false);
+        tenantRepository.findTenants(rentContract.getId())
                 .forEach(tenantRepository::deleteTenant);
-        tenantRepository.saveContact(rentContact);
+        tenantRepository.saveContact(rentContract);
     }
 
     @Override
-    public void renewContact(RentContact rentContact, long end) {
-        rentContact.setActive(true);
-        rentContact.setEnd(end);
-        tenantRepository.saveContact(rentContact);
+    public void renewContact(RentContract rentContract, long end) {
+        rentContract.setActive(true);
+        rentContract.setEnd(end);
+        tenantRepository.saveContact(rentContract);
     }
 }

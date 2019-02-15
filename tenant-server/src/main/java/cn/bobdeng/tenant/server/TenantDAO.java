@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public interface TenantDAO extends CrudRepository<TenantDO,Long> {
 
-    Stream<TenantDO> findByRentContactId(int contactId);
+    Stream<TenantDO> findByRentContractId(int contactId);
 
-    Optional<TenantDO> findByRentContactIdAndMobile(int contactId, String mobile);
+    Optional<TenantDO> findByRentContractIdAndMobile(int contactId, String mobile);
 }

@@ -22,7 +22,7 @@ public class TenantServiceImplTest {
 
     @Test
     public void newContact() {
-        RentContact rentContact = tenantService.newContact(RentContact.builder()
+        RentContract rentContact = tenantService.newContact(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
                 .start(System.currentTimeMillis()-1)
                 .end(System.currentTimeMillis() + 1000000)
@@ -32,7 +32,7 @@ public class TenantServiceImplTest {
     }
     @Test
     public void newContact_repeat() {
-        RentContact rentContact = tenantService.newContact(RentContact.builder()
+        RentContract rentContact = tenantService.newContact(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
                 .start(System.currentTimeMillis()-1)
                 .end(System.currentTimeMillis() + 1000000)
@@ -40,7 +40,7 @@ public class TenantServiceImplTest {
         assertTrue(rentContact.isActive());
         assertTrue(rentContact.isValid());
         try{
-            rentContact = tenantService.newContact(RentContact.builder()
+            rentContact = tenantService.newContact(RentContract.builder()
                     .apartmentId(APARTMENT_ID)
                     .start(System.currentTimeMillis()-1)
                     .end(System.currentTimeMillis() + 1000000)
@@ -57,7 +57,7 @@ public class TenantServiceImplTest {
 
     @Test
     public void renewContact() {
-        RentContact rentContact = tenantService.newContact(RentContact.builder()
+        RentContract rentContact = tenantService.newContact(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
                 .start(System.currentTimeMillis()-100000)
                 .end(System.currentTimeMillis())
@@ -66,7 +66,7 @@ public class TenantServiceImplTest {
     }
     @Test
     public void addTenant(){
-        RentContact rentContact = tenantService.newContact(RentContact.builder()
+        RentContract rentContact = tenantService.newContact(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
                 .start(System.currentTimeMillis()-100000)
                 .end(System.currentTimeMillis())

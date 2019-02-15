@@ -11,11 +11,11 @@ import java.beans.Transient;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RentContact {
+public class RentContract {
     private int id;
     private String representName;
     private String representMobile;
-    private String contactId;
+    private String contractId;
     private int apartmentId;
     private boolean active;
     private long start;

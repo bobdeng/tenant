@@ -8,15 +8,15 @@ public interface TenantRepository {
 
     Optional<Tenant> findById(long id);
 
-    Optional<Tenant> findByContactAndMobile(int contactId,String mobile);
+    Optional<Tenant> findByContractAndMobile(int contractId, String mobile);
 
     List<Tenant> findTenants(int contactId);
 
-    Optional<RentContact> findContactById(int contactId);
+    Optional<RentContract> findContractById(int contractId);
 
     void deleteTenant(Tenant tenant);
 
-    Optional<RentContact> findLastContact(int apartmentId);
+    Optional<RentContract> findLastContract(int apartmentId);
 
-    RentContact saveContact(RentContact rentContact);
+    RentContract saveContact(RentContract rentContract);
 }
