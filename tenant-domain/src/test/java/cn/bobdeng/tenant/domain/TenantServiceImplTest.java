@@ -22,7 +22,7 @@ public class TenantServiceImplTest {
 
     @Test
     public void newContact() {
-        RentContract rentContact = tenantService.newContact(RentContract.builder()
+        RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
                 .start(System.currentTimeMillis()-1)
                 .end(System.currentTimeMillis() + 1000000)
@@ -32,7 +32,7 @@ public class TenantServiceImplTest {
     }
     @Test
     public void newContact_repeat() {
-        RentContract rentContact = tenantService.newContact(RentContract.builder()
+        RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
                 .start(System.currentTimeMillis()-1)
                 .end(System.currentTimeMillis() + 1000000)
@@ -40,7 +40,7 @@ public class TenantServiceImplTest {
         assertTrue(rentContact.isActive());
         assertTrue(rentContact.isValid());
         try{
-            rentContact = tenantService.newContact(RentContract.builder()
+            rentContact = tenantService.newContract(RentContract.builder()
                     .apartmentId(APARTMENT_ID)
                     .start(System.currentTimeMillis()-1)
                     .end(System.currentTimeMillis() + 1000000)
@@ -57,16 +57,16 @@ public class TenantServiceImplTest {
 
     @Test
     public void renewContact() {
-        RentContract rentContact = tenantService.newContact(RentContract.builder()
+        RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
                 .start(System.currentTimeMillis()-100000)
                 .end(System.currentTimeMillis())
                 .build());
-        tenantService.renewContact(rentContact,System.currentTimeMillis()+100000);
+        tenantService.renewContract(rentContact,System.currentTimeMillis()+100000);
     }
     @Test
     public void addTenant(){
-        RentContract rentContact = tenantService.newContact(RentContract.builder()
+        RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
                 .start(System.currentTimeMillis()-100000)
                 .end(System.currentTimeMillis())

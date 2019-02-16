@@ -23,7 +23,7 @@ public class TenantServiceImpl implements TenantService {
     }
 
     @Override
-    public RentContract newContact(RentContract rentContract) {
+    public RentContract newContract(RentContract rentContract) {
         if (tenantRepository.findLastContract(rentContract.getApartmentId())
                 .filter(RentContract::isActive)
                 .isPresent()) {
@@ -35,7 +35,7 @@ public class TenantServiceImpl implements TenantService {
     }
 
     @Override
-    public void stopContact(RentContract rentContract) {
+    public void stopContract(RentContract rentContract) {
         rentContract.setActive(false);
         tenantRepository.findTenants(rentContract.getId())
                 .forEach(tenantRepository::deleteTenant);
@@ -43,7 +43,7 @@ public class TenantServiceImpl implements TenantService {
     }
 
     @Override
-    public void renewContact(RentContract rentContract, long end) {
+    public void renewContract(RentContract rentContract, long end) {
         rentContract.setActive(true);
         rentContract.setEnd(end);
         tenantRepository.saveContact(rentContract);

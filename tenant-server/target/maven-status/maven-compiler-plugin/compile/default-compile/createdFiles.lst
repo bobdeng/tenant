@@ -1,8 +1,8 @@
 cn/bobdeng/tenant/server/TenantRepositoryImpl.class
 cn/bobdeng/tenant/server/TenantDAO.class
 cn/bobdeng/tenant/server/TenantDO.class
-cn/bobdeng/tenant/server/RentContactDO.class
-cn/bobdeng/tenant/server/RentContactDO$RentContactDOBuilder.class
+cn/bobdeng/tenant/server/RentContractDO$RentContractDOBuilder.class
+cn/bobdeng/tenant/server/RentContractDO.class
 cn/bobdeng/tenant/server/TenantDO$TenantDOBuilder.class
 cn/bobdeng/tenant/server/RentContactDAO.class
 cn/bobdeng/tenant/server/TenantConfig.class

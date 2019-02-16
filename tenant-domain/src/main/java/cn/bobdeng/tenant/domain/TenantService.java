@@ -5,9 +5,9 @@ public interface TenantService {
 
     void deleteTenant(Tenant tenant);
 
-    RentContract newContact(RentContract rentContract);
+    RentContract newContract(RentContract rentContract);
 
-    void stopContact(RentContract rentContract);
+    void stopContract(RentContract rentContract);
 
-    void renewContact(RentContract rentContract, long end);
+    void renewContract(RentContract rentContract, long end);
 }
