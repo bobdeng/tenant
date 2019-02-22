@@ -1,7 +1,7 @@
-/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/RentContact.java
-/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateTenantException.java
-/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java
-/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantService.java
-/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateContactException.java
-/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java
-/Users/zhiguodeng/git/smartlock/server2/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/Tenant.java
+/Users/dengzhiguo/workspace/ag/rent/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantService.java
+/Users/dengzhiguo/workspace/ag/rent/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateTenantException.java
+/Users/dengzhiguo/workspace/ag/rent/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/DuplicateContactException.java
+/Users/dengzhiguo/workspace/ag/rent/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/RentContract.java
+/Users/dengzhiguo/workspace/ag/rent/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/Tenant.java
+/Users/dengzhiguo/workspace/ag/rent/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantRepository.java
+/Users/dengzhiguo/workspace/ag/rent/tenant/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java
