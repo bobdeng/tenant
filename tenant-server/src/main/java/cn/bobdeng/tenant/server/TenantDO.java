@@ -25,7 +25,7 @@ public class TenantDO {
     @Column(length = 15)
     private String mobile;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "rent_contact_id", foreignKey = @javax.persistence.ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
+    @JoinColumn(name = "rent_contract_id", foreignKey = @javax.persistence.ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
     private RentContractDO rentContract;
     @Column(length = 200)
     private String faceImage;
