@@ -23,6 +23,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
