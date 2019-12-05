@@ -15,5 +15,10 @@ public class Tenant {
     private String mobile;
     private String faceImage;
     private String comCode;
+    private int lockRole;
     private RentContract rentContact;
+
+    public boolean hasLockRole() {
+        return lockRole > 0;
+    }
 }

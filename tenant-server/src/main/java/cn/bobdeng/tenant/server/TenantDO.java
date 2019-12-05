@@ -29,6 +29,7 @@ public class TenantDO {
     private RentContractDO rentContract;
     @Column(length = 200)
     private String faceImage;
+    private int lockRole;
 
     public Tenant toEntity() {
         return Tenant.builder()
@@ -36,6 +37,7 @@ public class TenantDO {
                 .comCode(getComCode())
                 .mobile(getMobile())
                 .name(getName())
+                .lockRole(this.lockRole)
                 .faceImage(getFaceImage())
                 .rentContact(rentContract.toEntity())
                 .build();
@@ -47,6 +49,7 @@ public class TenantDO {
                 .name(entity.getName())
                 .faceImage(entity.getFaceImage())
                 .mobile(entity.getMobile())
+                .lockRole(entity.getLockRole())
                 .comCode(entity.getComCode())
                 .rentContract(RentContractDO.fromEntity(entity.getRentContact()))
                 .build();

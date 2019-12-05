@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="tenant-domain" />
         <module name="tenant-server" />
-        <module name="tenantdomain" />
         <module name="tenantserver" />
+        <module name="tenantdomain" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8" />

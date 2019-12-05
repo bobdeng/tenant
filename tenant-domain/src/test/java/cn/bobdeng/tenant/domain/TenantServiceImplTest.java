@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 @RunWith(JUnit4.class)
 public class TenantServiceImplTest {
@@ -74,6 +75,7 @@ public class TenantServiceImplTest {
         tenantService.newTenant(Tenant.builder()
                 .rentContact(rentContact)
                 .name("name")
+                .lockRole(0)
                 .mobile(MOBILE)
                 .build());
         try{
@@ -81,8 +83,9 @@ public class TenantServiceImplTest {
                     .rentContact(rentContact)
                     .name("name")
                     .mobile(MOBILE)
+                    .lockRole(0)
                     .build());
-            assertTrue(false);
+            fail();
         }catch (DuplicateTenantException e){
 
         }
