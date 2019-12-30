@@ -90,4 +90,45 @@ public class TenantServiceImplTest {
 
         }
     }
+
+    @Test
+    public void addTenant_null_mobile(){
+        RentContract rentContact = tenantService.newContract(RentContract.builder()
+                .apartmentId(APARTMENT_ID)
+                .start(System.currentTimeMillis()-100000)
+                .end(System.currentTimeMillis())
+                .build());
+        tenantService.newTenant(Tenant.builder()
+                .rentContact(rentContact)
+                .name("name")
+                .lockRole(0)
+                .build());
+        tenantService.newTenant(Tenant.builder()
+                .rentContact(rentContact)
+                .name("name")
+                .lockRole(0)
+                .build());
+    }
+
+    @Test
+    public void addTenant_empty_mobile(){
+        RentContract rentContact = tenantService.newContract(RentContract.builder()
+                .apartmentId(APARTMENT_ID)
+
+                .start(System.currentTimeMillis()-100000)
+                .end(System.currentTimeMillis())
+                .build());
+        tenantService.newTenant(Tenant.builder()
+                .rentContact(rentContact)
+                .name("name")
+                .mobile("")
+                .lockRole(0)
+                .build());
+        tenantService.newTenant(Tenant.builder()
+                .rentContact(rentContact)
+                .name("name")
+                .mobile("")
+                .lockRole(0)
+                .build());
+    }
 }

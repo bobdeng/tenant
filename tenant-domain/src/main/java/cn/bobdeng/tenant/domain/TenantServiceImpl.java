@@ -9,11 +9,18 @@ public class TenantServiceImpl implements TenantService {
 
     @Override
     public Tenant newTenant(Tenant tenant) {
-        if (tenantRepository.findByContractAndMobile(tenant.getRentContact().getId(),tenant.getMobile()).isPresent()) {
+        if (isSameMobileExist(tenant)) {
             throw new DuplicateTenantException();
         }
         tenant.setId(0);
         return tenantRepository.newTenant(tenant);
+    }
+
+    private boolean isSameMobileExist(Tenant tenant) {
+        if(tenant.getMobile()==null || tenant.getMobile().equals("")){
+            return false;
+        }
+        return tenantRepository.findByContractAndMobile(tenant.getRentContact().getId(),tenant.getMobile()).isPresent();
     }
 
     @Override
