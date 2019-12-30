@@ -8,6 +8,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../tenacy-company/src/main/java/cn/bobdeng/auth/rent/RentFacadeImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tenant-domain/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/Tenant.java">
           <value>
             <set />
@@ -23,7 +38,42 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/tenant-server/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../smartlock/lock/domain/src/main/java/cn/bobdeng/smartlock/lock/FingerPassService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../smartlock/lock/domain/src/main/java/cn/bobdeng/smartlock/lock/UserFingers.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../smartlock/vip-server/src/main/java/cn/bobdeng/smartlock/fingerpass/AddFingerPassForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../smartlock/vip-server/src/main/java/cn/bobdeng/smartlock/fingerpass/DelFingerPassForm.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../smartlock/vip-server/src/main/java/cn/bobdeng/smartlock/fingerpass/FingerPassController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../smartlock/vip-server/src/main/java/cn/bobdeng/smartlock/fingerpass/FingerPassFacade.java">
           <value>
             <set />
           </value>

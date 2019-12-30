@@ -25,3 +25,7 @@ t
 Dtenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantTest.java,a/6/a6b8897f8e5a604b11a166f7231258e11173d5d0
 r
 Btenant-server/src/main/java/cn/bobdeng/tenant/server/TenantDO.java,5/9/593343b970d15b4c40a7416cbb0f191f6195ba13
+E
+tenant-domain/pom.xml,c/f/cf8362067f4d9cdad1e7dd5f6649ec4cfcbb4864
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec

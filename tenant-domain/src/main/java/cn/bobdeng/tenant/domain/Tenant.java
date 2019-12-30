@@ -21,4 +21,8 @@ public class Tenant {
     public boolean hasLockRole() {
         return lockRole > 0;
     }
+
+    public boolean isAdmin() {
+        return lockRole >= 100;
+    }
 }

@@ -23,4 +23,21 @@ public class TenantTest {
                 .build();
         assertTrue(tenant.hasLockRole());
     }
+
+    @Test
+    public void test_admin(){
+        Tenant tenant = Tenant.builder()
+                .name("name")
+                .lockRole(100)
+                .build();
+        assertTrue(tenant.isAdmin());
+    }
+    @Test
+    public void test_not_admin(){
+        Tenant tenant = Tenant.builder()
+                .name("name")
+                .lockRole(50)
+                .build();
+        assertFalse(tenant.isAdmin());
+    }
 }
