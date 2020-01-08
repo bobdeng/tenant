@@ -52,6 +52,7 @@ public class TenantServiceImplTest {
         }
     }
 
+
     @Test
     public void stopContact() {
     }
@@ -83,6 +84,32 @@ public class TenantServiceImplTest {
                     .rentContact(rentContact)
                     .name("name")
                     .mobile(MOBILE)
+                    .lockRole(0)
+                    .build());
+            fail();
+        }catch (DuplicateTenantException e){
+
+        }
+    }
+
+    @Test
+    public void addTenant_same_name(){
+        RentContract rentContact = tenantService.newContract(RentContract.builder()
+                .apartmentId(APARTMENT_ID)
+                .start(System.currentTimeMillis()-100000)
+                .end(System.currentTimeMillis())
+                .build());
+        tenantService.newTenant(Tenant.builder()
+                .rentContact(rentContact)
+                .name("name")
+                .lockRole(0)
+                .mobile(MOBILE)
+                .build());
+        try{
+            tenantService.newTenant(Tenant.builder()
+                    .rentContact(rentContact)
+                    .name("name")
+                    .mobile("153365864448")
                     .lockRole(0)
                     .build());
             fail();

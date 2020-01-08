@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Objects;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -24,5 +26,10 @@ public class Tenant {
 
     public boolean isAdmin() {
         return lockRole >= 100;
+    }
+
+    public boolean isSame(Tenant tenant) {
+        return Objects.equals(name,tenant.getName()) || Objects.equals(mobile,tenant.getMobile()
+        );
     }
 }

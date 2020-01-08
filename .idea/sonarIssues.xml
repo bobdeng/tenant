@@ -8,6 +8,36 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../lockuser/lockuser-domain/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../lockuser/lockuser-domain/src/main/java/cn/bobdeng/rent/lockuser/LockUserCreateEvent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../lockuser/lockuser-domain/src/main/java/cn/bobdeng/rent/lockuser/LockUserDeleteEvent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../lockuser/lockuser-domain/src/main/java/cn/bobdeng/rent/lockuser/LockUserServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../lockuser/lockuser-server/src/main/java/cn/bobdeng/rent/lockuser/LockUserConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../lockuser/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../tenacy-company/src/main/java/cn/bobdeng/auth/lock/LockFacadeImpl.java">
           <value>
             <set />
@@ -34,6 +64,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantRepositoryImpl.java">
           <value>
             <set />
           </value>

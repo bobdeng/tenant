@@ -1,6 +1,7 @@
 package cn.bobdeng.tenant.domain;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class TenantRepositoryImpl implements TenantRepository {
     private Map<Integer, RentContract> contactMap=new HashMap<>();
@@ -42,7 +43,9 @@ public class TenantRepositoryImpl implements TenantRepository {
 
     @Override
     public List<Tenant> findTenants(int contactId) {
-        return null;
+        return tenantMap.values().stream()
+                .filter(tenant -> tenant.getRentContact().getId()==contactId)
+                .collect(Collectors.toList());
     }
 
     @Override
