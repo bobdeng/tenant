@@ -8,6 +8,121 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/AddFaceCommand.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/DeleteFaceCommand.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/EditFaceCommand.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommand.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommandRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommandService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommandServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/Globals.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/ModifyFaceCommand.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/SaveFaceCommand.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/Tenant.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/main/java/cn/bobdeng/tenant/equipmentcommand/TimeRange.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-domain/src/test/java/cn/bobdeng/tenant/equipmentcommand/EquipmentServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-server/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-server/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommandConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-server/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommandDAO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-server/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommandDO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-server/src/main/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommandRepositoryJpaImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-server/src/main/java/cn/bobdeng/tenant/equipmentcommand/NetworkException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/equipmentcommand-server/src/test/java/cn/bobdeng/tenant/equipmentcommand/EquipmentCommandDOTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../equipmentcommand/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../lockuser/lockuser-domain/pom.xml">
           <value>
             <set />
@@ -68,6 +183,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/NewTenantEvent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/RemoveTenantEvent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/TenantEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantRepositoryImpl.java">
           <value>
             <set />
@@ -84,6 +214,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/tenant-server/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tenant-server/src/main/java/cn/bobdeng/tenant/server/TenantConfig.java">
           <value>
             <set />
           </value>

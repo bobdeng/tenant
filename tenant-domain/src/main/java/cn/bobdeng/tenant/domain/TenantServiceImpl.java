@@ -1,10 +1,16 @@
 package cn.bobdeng.tenant.domain;
 
-public class TenantServiceImpl implements TenantService {
-    TenantRepository tenantRepository;
+import cn.bobdeng.domainevent.EventPublisher;
+import cn.bobdeng.tenant.domain.events.NewTenantEvent;
+import cn.bobdeng.tenant.domain.events.RemoveTenantEvent;
+import cn.bobdeng.tenant.domain.events.TenantEvents;
 
-    public TenantServiceImpl(TenantRepository tenantRepository) {
+public class TenantServiceImpl implements TenantService {
+    private final TenantRepository tenantRepository;
+    private final EventPublisher eventPublisher;
+    public TenantServiceImpl(TenantRepository tenantRepository, EventPublisher eventPublisher) {
         this.tenantRepository = tenantRepository;
+        this.eventPublisher = eventPublisher;
     }
 
     @Override
@@ -13,7 +19,9 @@ public class TenantServiceImpl implements TenantService {
             throw new DuplicateTenantException();
         }
         tenant.setId(0);
-        return tenantRepository.newTenant(tenant);
+        tenant = tenantRepository.newTenant(tenant);
+        eventPublisher.publish(TenantEvents.NEW_TENANT_EVENT,new NewTenantEvent(tenant));
+        return tenant;
     }
 
     private boolean isSameExist(Tenant tenant) {
@@ -28,7 +36,12 @@ public class TenantServiceImpl implements TenantService {
     @Override
     public void deleteTenant(Tenant tenant) {
         tenantRepository.findById(tenant.getId())
-                .ifPresent(tenantRepository::deleteTenant);
+                .ifPresent(this::removeTenant);
+    }
+
+    private void removeTenant(Tenant tenant) {
+        tenantRepository.deleteTenant(tenant);
+        eventPublisher.publish(TenantEvents.REMOVE_TENANT_EVENT,new RemoveTenantEvent(tenant));
     }
 
     @Override

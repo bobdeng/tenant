@@ -1,5 +1,6 @@
 package cn.bobdeng.tenant.server;
 
+import cn.bobdeng.domainevent.EventPublisher;
 import cn.bobdeng.tenant.domain.TenantRepository;
 import cn.bobdeng.tenant.domain.TenantService;
 import cn.bobdeng.tenant.domain.TenantServiceImpl;
@@ -13,7 +14,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("cn.bobdeng.tenant.server")
 public class TenantConfig {
     @Bean
-    public TenantService tenantService(TenantRepository tenantRepository) {
-        return new TenantServiceImpl(tenantRepository);
+    public TenantService tenantService(TenantRepository tenantRepository, EventPublisher eventPublisher) {
+        return new TenantServiceImpl(tenantRepository, eventPublisher);
     }
 }

@@ -1,5 +1,8 @@
 package cn.bobdeng.tenant.domain;
 
+import cn.bobdeng.domainevent.EventPublisher;
+import cn.bobdeng.tenant.domain.events.NewTenantEvent;
+import cn.bobdeng.tenant.domain.events.TenantEvents;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,6 +10,8 @@ import org.junit.runners.JUnit4;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 @RunWith(JUnit4.class)
 public class TenantServiceImplTest {
@@ -14,40 +19,44 @@ public class TenantServiceImplTest {
     public static final String MOBILE = "18657124116";
     TenantServiceImpl tenantService;
     TenantRepositoryImpl tenantRepository;
+    EventPublisher eventPublisher;
 
     @Before
     public void init() {
         tenantRepository = new TenantRepositoryImpl();
-        tenantService = new TenantServiceImpl(tenantRepository);
+        eventPublisher = mock(EventPublisher.class);
+        tenantService = new TenantServiceImpl(tenantRepository, eventPublisher);
     }
 
     @Test
     public void newContact() {
         RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
-                .start(System.currentTimeMillis()-1)
+                .start(System.currentTimeMillis() - 1)
                 .end(System.currentTimeMillis() + 1000000)
                 .build());
         assertTrue(rentContact.isActive());
         assertTrue(rentContact.isValid());
+
     }
+
     @Test
     public void newContact_repeat() {
         RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
-                .start(System.currentTimeMillis()-1)
+                .start(System.currentTimeMillis() - 1)
                 .end(System.currentTimeMillis() + 1000000)
                 .build());
         assertTrue(rentContact.isActive());
         assertTrue(rentContact.isValid());
-        try{
+        try {
             rentContact = tenantService.newContract(RentContract.builder()
                     .apartmentId(APARTMENT_ID)
-                    .start(System.currentTimeMillis()-1)
+                    .start(System.currentTimeMillis() - 1)
                     .end(System.currentTimeMillis() + 1000000)
                     .build());
             assertTrue(false);
-        }catch (DuplicateContactException e){
+        } catch (DuplicateContactException e) {
 
         }
     }
@@ -61,42 +70,46 @@ public class TenantServiceImplTest {
     public void renewContact() {
         RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
-                .start(System.currentTimeMillis()-100000)
+                .start(System.currentTimeMillis() - 100000)
                 .end(System.currentTimeMillis())
                 .build());
-        tenantService.renewContract(rentContact,System.currentTimeMillis()+100000);
+        tenantService.renewContract(rentContact, System.currentTimeMillis() + 100000);
     }
+
     @Test
-    public void addTenant(){
+    public void addTenant() {
         RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
-                .start(System.currentTimeMillis()-100000)
+                .start(System.currentTimeMillis() - 100000)
                 .end(System.currentTimeMillis())
                 .build());
-        tenantService.newTenant(Tenant.builder()
+        Tenant tenant1 = Tenant.builder()
                 .rentContact(rentContact)
                 .name("name")
                 .lockRole(0)
                 .mobile(MOBILE)
-                .build());
-        try{
-            tenantService.newTenant(Tenant.builder()
+                .build();
+        tenantService.newTenant(tenant1);
+        verify(eventPublisher).publish(TenantEvents.NEW_TENANT_EVENT, new NewTenantEvent(tenant1));
+        try {
+            Tenant tenant2 = Tenant.builder()
                     .rentContact(rentContact)
                     .name("name")
                     .mobile(MOBILE)
                     .lockRole(0)
-                    .build());
+                    .build();
+            tenantService.newTenant(tenant2);
             fail();
-        }catch (DuplicateTenantException e){
+        } catch (DuplicateTenantException e) {
 
         }
     }
 
     @Test
-    public void addTenant_same_name(){
+    public void addTenant_same_name() {
         RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
-                .start(System.currentTimeMillis()-100000)
+                .start(System.currentTimeMillis() - 100000)
                 .end(System.currentTimeMillis())
                 .build());
         tenantService.newTenant(Tenant.builder()
@@ -105,7 +118,7 @@ public class TenantServiceImplTest {
                 .lockRole(0)
                 .mobile(MOBILE)
                 .build());
-        try{
+        try {
             tenantService.newTenant(Tenant.builder()
                     .rentContact(rentContact)
                     .name("name")
@@ -113,16 +126,16 @@ public class TenantServiceImplTest {
                     .lockRole(0)
                     .build());
             fail();
-        }catch (DuplicateTenantException e){
+        } catch (DuplicateTenantException e) {
 
         }
     }
 
     @Test
-    public void addTenant_null_mobile(){
+    public void addTenant_null_mobile() {
         RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
-                .start(System.currentTimeMillis()-100000)
+                .start(System.currentTimeMillis() - 100000)
                 .end(System.currentTimeMillis())
                 .build());
         tenantService.newTenant(Tenant.builder()
@@ -138,11 +151,11 @@ public class TenantServiceImplTest {
     }
 
     @Test
-    public void addTenant_empty_mobile(){
+    public void addTenant_empty_mobile() {
         RentContract rentContact = tenantService.newContract(RentContract.builder()
                 .apartmentId(APARTMENT_ID)
 
-                .start(System.currentTimeMillis()-100000)
+                .start(System.currentTimeMillis() - 100000)
                 .end(System.currentTimeMillis())
                 .build());
         tenantService.newTenant(Tenant.builder()
