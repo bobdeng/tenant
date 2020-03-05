@@ -2,6 +2,7 @@ package cn.bobdeng.tenant.domain;
 
 import cn.bobdeng.domainevent.EventPublisher;
 import cn.bobdeng.tenant.domain.events.NewTenantEvent;
+import cn.bobdeng.tenant.domain.events.RemoveTenantEvent;
 import cn.bobdeng.tenant.domain.events.RenewContractEvent;
 import cn.bobdeng.tenant.domain.events.TenantEvents;
 import org.junit.Before;
@@ -66,6 +67,20 @@ public class TenantServiceImplTest {
 
     @Test
     public void stopContact() {
+        RentContract rentContact = tenantService.newContract(RentContract.builder()
+                .apartmentId(APARTMENT_ID)
+                .start(System.currentTimeMillis() - 100000)
+                .end(System.currentTimeMillis())
+                .build());
+        Tenant tenant = Tenant.builder()
+                .rentContact(rentContact)
+                .name("name")
+                .lockRole(0)
+                .mobile(MOBILE)
+                .build();
+        tenantService.newTenant(tenant);
+        tenantService.stopContract(rentContact);
+        verify(eventPublisher).publish(TenantEvents.REMOVE_TENANT_EVENT,new RemoveTenantEvent(tenant));
     }
 
     @Test
@@ -81,7 +96,7 @@ public class TenantServiceImplTest {
                 .lockRole(0)
                 .mobile(MOBILE)
                 .build();
-        when(tenantRepository.findTenants(rentContact.getId())).thenReturn(Arrays.asList(tenant));
+        tenantService.newTenant(tenant);
         tenantService.renewContract(rentContact, System.currentTimeMillis() + 100000);
         verify(eventPublisher).publish(TenantEvents.RENEW_CONTRACT,new RenewContractEvent(tenant));
     }

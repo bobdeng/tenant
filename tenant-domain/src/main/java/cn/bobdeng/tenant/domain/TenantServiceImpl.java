@@ -62,7 +62,7 @@ public class TenantServiceImpl implements TenantService {
     public void stopContract(RentContract rentContract) {
         rentContract.setActive(false);
         tenantRepository.findTenants(rentContract.getId())
-                .forEach(tenantRepository::deleteTenant);
+                .forEach(this::removeTenant);
         tenantRepository.saveContact(rentContract);
     }
 

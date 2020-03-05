@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc064a9f-fadf-4db1-aefc-108ed1aac77e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/RenewContractEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/NewTenantEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/NewTenantEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/TenantEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/TenantEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+            <state relative-caret-position="309">
+              <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="85" column="99" selection-start-line="85" selection-start-column="99" selection-end-line="85" selection-end-column="99" />
+            <state relative-caret-position="165">
+              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="76" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -446,7 +440,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TenantServiceImplTest.addTenant_empty_mobile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TenantServiceImplTest.renewContact" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tenant-domain" />
       <extension name="coverage">
         <pattern>
@@ -456,14 +450,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.bobdeng.tenant.domain" />
       <option name="MAIN_CLASS_NAME" value="cn.bobdeng.tenant.domain.TenantServiceImplTest" />
-      <option name="METHOD_NAME" value="addTenant_empty_mobile" />
+      <option name="METHOD_NAME" value="renewContact" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TenantServiceImplTest.addTenant_same_mobile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TenantServiceImplTest.stopContact" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tenant-domain" />
       <extension name="coverage">
         <pattern>
@@ -473,7 +467,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="cn.bobdeng.tenant.domain" />
       <option name="MAIN_CLASS_NAME" value="cn.bobdeng.tenant.domain.TenantServiceImplTest" />
-      <option name="METHOD_NAME" value="addTenant_same_mobile" />
+      <option name="METHOD_NAME" value="stopContact" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -522,18 +516,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TenantServiceImplTest.addTenant (1)" />
-      <item itemvalue="JUnit.TenantServiceImplTest.addTenant_empty_mobile" />
       <item itemvalue="JUnit.TenantServiceImplTest (1)" />
-      <item itemvalue="JUnit.TenantServiceImplTest.addTenant_same_mobile" />
       <item itemvalue="JUnit.cn.bobdeng.tenant.domain in tenant-domain" />
+      <item itemvalue="JUnit.TenantServiceImplTest.stopContact" />
+      <item itemvalue="JUnit.TenantServiceImplTest.renewContact" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.cn.bobdeng.tenant.domain in tenant-domain" />
+        <item itemvalue="JUnit.TenantServiceImplTest.renewContact" />
+        <item itemvalue="JUnit.TenantServiceImplTest.stopContact" />
         <item itemvalue="JUnit.TenantServiceImplTest.addTenant (1)" />
         <item itemvalue="JUnit.TenantServiceImplTest (1)" />
-        <item itemvalue="JUnit.TenantServiceImplTest.addTenant_same_mobile" />
-        <item itemvalue="JUnit.TenantServiceImplTest.addTenant_empty_mobile" />
       </list>
     </recent_temporary>
   </component>
@@ -569,7 +563,7 @@
       <workItem from="1577695494163" duration="230000" />
       <workItem from="1577933161318" duration="544000" />
       <workItem from="1578455609822" duration="464000" />
-      <workItem from="1583299200647" duration="2903000" />
+      <workItem from="1583299200647" duration="3035000" />
     </task>
     <servers />
   </component>
@@ -606,7 +600,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17891000" />
+    <option name="totallyTimeSpent" value="18023000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1416" height="800" extended-state="0" />
@@ -622,14 +616,14 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32911393" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329927" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32846716" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32846716" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -833,15 +827,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tenant-domain/src/test/java/cn/bobdeng/tenant/domain/TenantServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="85" column="99" selection-start-line="85" selection-start-column="99" selection-end-line="85" selection-end-column="99" />
+        <state relative-caret-position="165">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="76" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/TenantServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        <state relative-caret-position="309">
+          <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
