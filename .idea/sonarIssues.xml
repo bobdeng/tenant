@@ -193,6 +193,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/RenewContractEvent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/tenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/TenantEvents.java">
           <value>
             <set />

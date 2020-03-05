@@ -2,16 +2,18 @@ package cn.bobdeng.tenant.domain;
 
 import cn.bobdeng.domainevent.EventPublisher;
 import cn.bobdeng.tenant.domain.events.NewTenantEvent;
+import cn.bobdeng.tenant.domain.events.RenewContractEvent;
 import cn.bobdeng.tenant.domain.events.TenantEvents;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @RunWith(JUnit4.class)
 public class TenantServiceImplTest {
@@ -73,7 +75,15 @@ public class TenantServiceImplTest {
                 .start(System.currentTimeMillis() - 100000)
                 .end(System.currentTimeMillis())
                 .build());
+        Tenant tenant = Tenant.builder()
+                .rentContact(rentContact)
+                .name("name")
+                .lockRole(0)
+                .mobile(MOBILE)
+                .build();
+        when(tenantRepository.findTenants(rentContact.getId())).thenReturn(Arrays.asList(tenant));
         tenantService.renewContract(rentContact, System.currentTimeMillis() + 100000);
+        verify(eventPublisher).publish(TenantEvents.RENEW_CONTRACT,new RenewContractEvent(tenant));
     }
 
     @Test

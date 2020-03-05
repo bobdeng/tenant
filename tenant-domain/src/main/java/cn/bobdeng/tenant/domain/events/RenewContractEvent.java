@@ -4,14 +4,14 @@ import cn.bobdeng.tenant.domain.Tenant;
 import lombok.Data;
 
 @Data
-public class NewTenantEvent {
+public class RenewContractEvent {
+    private long start;
+    private long end;
     private String name;
     private String face;
     private long id;
-    private long start;
-    private long end;
 
-    public NewTenantEvent(Tenant tenant) {
+    public RenewContractEvent(Tenant tenant) {
         this.id = tenant.getId();
         this.name = tenant.getName();
         this.face = tenant.getFaceImage();

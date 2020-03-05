@@ -3,11 +3,13 @@ package cn.bobdeng.tenant.domain;
 import cn.bobdeng.domainevent.EventPublisher;
 import cn.bobdeng.tenant.domain.events.NewTenantEvent;
 import cn.bobdeng.tenant.domain.events.RemoveTenantEvent;
+import cn.bobdeng.tenant.domain.events.RenewContractEvent;
 import cn.bobdeng.tenant.domain.events.TenantEvents;
 
 public class TenantServiceImpl implements TenantService {
     private final TenantRepository tenantRepository;
     private final EventPublisher eventPublisher;
+
     public TenantServiceImpl(TenantRepository tenantRepository, EventPublisher eventPublisher) {
         this.tenantRepository = tenantRepository;
         this.eventPublisher = eventPublisher;
@@ -20,7 +22,7 @@ public class TenantServiceImpl implements TenantService {
         }
         tenant.setId(0);
         tenant = tenantRepository.newTenant(tenant);
-        eventPublisher.publish(TenantEvents.NEW_TENANT_EVENT,new NewTenantEvent(tenant));
+        eventPublisher.publish(TenantEvents.NEW_TENANT_EVENT, new NewTenantEvent(tenant));
         return tenant;
     }
 
@@ -41,7 +43,7 @@ public class TenantServiceImpl implements TenantService {
 
     private void removeTenant(Tenant tenant) {
         tenantRepository.deleteTenant(tenant);
-        eventPublisher.publish(TenantEvents.REMOVE_TENANT_EVENT,new RemoveTenantEvent(tenant));
+        eventPublisher.publish(TenantEvents.REMOVE_TENANT_EVENT, new RemoveTenantEvent(tenant));
     }
 
     @Override
@@ -69,5 +71,7 @@ public class TenantServiceImpl implements TenantService {
         rentContract.setActive(true);
         rentContract.setEnd(end);
         tenantRepository.saveContact(rentContract);
+        tenantRepository.findTenants(rentContract.getId()).stream()
+                .forEach(tenant -> eventPublisher.publish(TenantEvents.RENEW_CONTRACT, new RenewContractEvent(tenant)));
     }
 }
