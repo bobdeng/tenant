@@ -29,3 +29,17 @@ E
 tenant-domain/pom.xml,c/f/cf8362067f4d9cdad1e7dd5f6649ec4cfcbb4864
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+ƒ
+Stenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/RenewContractEvent.java,6/4/644412ff4c261eaed89a3c05cbda157037ccb3cb
+‚
+Rtenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/RemoveTenantEvent.java,c/3/c392682465b3f274181b1ef1290d0afaba0e0c17
+
+Otenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/NewTenantEvent.java,1/2/12c2a03da238dca42a79958abd6b850e9d6898c1
+}
+Mtenant-domain/src/main/java/cn/bobdeng/tenant/domain/events/TenantEvents.java,1/4/14f6b7db51200c56c3a6630fbaff367a65e3c336
+~
+Ntenant-server/src/main/java/cn/bobdeng/tenant/server/TenantRepositoryImpl.java,d/b/db3e18b5d9abcfb9c7cf72b947ada096d7379c28
+x
+Htenant-server/src/main/java/cn/bobdeng/tenant/server/RentContactDAO.java,c/d/cd718a18cc04e8866cd9e9c2efda56163092b08f
+v
+Ftenant-server/src/main/java/cn/bobdeng/tenant/server/TenantConfig.java,5/4/545d99e37b8bd0f2119ad7ec54e245cddbf8ca0e

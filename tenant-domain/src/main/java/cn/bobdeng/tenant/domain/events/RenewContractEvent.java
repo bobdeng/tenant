@@ -10,6 +10,7 @@ public class RenewContractEvent {
     private String name;
     private String face;
     private long id;
+    private int apartmentId;
 
     public RenewContractEvent(Tenant tenant) {
         this.id = tenant.getId();
@@ -17,5 +18,6 @@ public class RenewContractEvent {
         this.face = tenant.getFaceImage();
         this.start = tenant.getRentContact().getStart();
         this.end = tenant.getRentContact().getEnd();
+        this.apartmentId = tenant.getRentContact().getApartmentId();
     }
 }
